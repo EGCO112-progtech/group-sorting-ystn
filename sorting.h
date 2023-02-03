@@ -25,11 +25,12 @@ void selectionSort(int data[], int length)
     mi = i;
     for (j = i + 1; j < length; j++)
     {
-      if (data[j] > data[mi]) mi = j;
+      if (data[j] > data[m,mi]) mi = j;
       
-      if (mi != i) swap(&data[i], &data[mi]);
+      
 
     }
+    swap(&data[i], &data[mi]);
   display(data,length);
   printf("\n");
   }
