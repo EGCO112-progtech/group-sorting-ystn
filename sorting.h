@@ -21,9 +21,22 @@ void selectionSort(int data[], int length)
 
 
 
-void insertion(int a[],int n){
-
-
+void insertionSort(int x[], int n) {
+  // int x[] = {5, 7, 3};
+  int j, i;
+  for (j = 1; j < n; j++) {
+    int value = x[j];
+    for (i = j - 1; i >= 0; i--) {
+      if (value < x[i])
+        break;
+      else
+        x[i + 1] = x[i];
+      display(x, n);
+    }
+    x[i + 1] = value;
+    display(x, n);
+    printf("\n");
+  }
 }
 
 void swap(int *a,int *b){
