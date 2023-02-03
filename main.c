@@ -7,9 +7,7 @@
 
 int main(int argc, char* argv[]) {
   int i,N, *a;
-  //printf("%s",argv[1]);
   N = argc - 2;
-  //char *sort = argv[0];
   a = (int*)malloc(sizeof(int) * N);
   for (i = 0; i < N; i++)
     {
@@ -20,10 +18,12 @@ int main(int argc, char* argv[]) {
   if(!(strcmp(argv[1],"bubble"))){
     bubbleSort(a,N); 
   }
-  else if(!(strcmp(argv[1],"insertion")))  
-   insertionSort(a,N); 
-  else
+  else if(!(strcmp(argv[1],"insertion"))){  
+    insertionSort(a,N); 
+  }
+  else{
     selectionSort(a,N);
+  }
   printf("\n");
   display(a,N);
  return 0;

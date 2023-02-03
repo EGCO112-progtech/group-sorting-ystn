@@ -9,13 +9,30 @@ void display(int a[],int n){
     printf("\n");
   
 }
+void swap(int *a,int *b){
+ int temp;
+  temp=*a;
+  *a=*b;
+  *b=temp;
+  
+}
 
 void selectionSort(int data[], int length) 
 { 
 	int i, j, m, mi; 
-	
-     display(data,length);
-     
+	for (i = 0; i < length - 1; i++)
+  {
+    mi = i;
+    for (j = i + 1; j < length; j++)
+    {
+      if (data[j] < data[mi]) mi = j;
+      
+      if (mi != i) swap(&data[i], &data[mi]);
+
+    }
+  display(data,length);
+  printf("\n");
+  }
 	
 } 
 
@@ -40,13 +57,7 @@ void insertionSort(int x[], int n) {
   display(x,n);
 }
 
-void swap(int *a,int *b){
- int temp;
-  temp=*a;
-  *a=*b;
-  *b=temp;
-  
-}
+
 
 void bubbleSort(int a[],int n){
 
