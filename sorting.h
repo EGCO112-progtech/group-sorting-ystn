@@ -36,8 +36,6 @@ void selectionSort(int data[], int length)
 	
 } 
 
-
-
 void insertionSort(int x[], int n) {
   // int x[] = {5, 7, 3};
   int j, i;
@@ -54,7 +52,7 @@ void insertionSort(int x[], int n) {
     display(x, n);
     printf("\n");
   }
-  display(x,n);
+  //display(x,n);
 }
 
 
