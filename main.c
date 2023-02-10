@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     {
       a[i] = atoi(argv[i+2]);
     }  
-
+  printf("Input :");
   display(a,N);
   if(!(strcmp(argv[1],"bubble"))){
     bubbleSort(a,N); 
